@@ -1,0 +1,39 @@
+name:                hetris
+version:             0.1.0.0
+synopsis:            Simple project template from stack
+description:         Please see README.md
+homepage:            https://github.com/VitorCBSB/hetris#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Vitor Coimbra
+maintainer:          vitorcoliveira91@gmail.com
+copyright:           Copyright (c) 2015 Vitor Coimbra
+category:            Experimental
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable hetris
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  ghc-options:         -ddump-simpl-stats -ddump-rule-firings -O2
+  build-depends:       base >= 4.7 && < 5
+                     , array
+                     , containers
+                     , gloss
+                     , gloss-rendering
+                     , microlens
+                     , microlens-th
+                     , random
+  other-modules:       Input
+                     , PlayingState.Input
+                     , PlayingState.State
+                     , PlayingState.Types
+                     , PlayingState.View
+                     , State
+                     , Types
+                     , View
+                     , WaitingToStart.Input
+                     , WaitingToStart.State
+                     , WaitingToStart.Types
+                     , WaitingToStart.View
